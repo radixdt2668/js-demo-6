@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>js-demo-6</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+</head>
+<body class="bg-warning">
+<div>
+<h2>Num of Vowels in string :- </h2>
+<h3></h3>
+</div>   
+<script>
+var str = window.prompt   (" Enter string:- ");
+function countvowel(str){
+var result = str.match(/[aeiou]/gi);
+return result === null ? 0 : result.length;}
+console.log(countvowel(str));
+$("div h2").append(countvowel(str));
+</script> 
+<script>
+    var str=window.prompt("enter string");
+    function capital_letter(str) 
+{
+    str = str.split(" ");
+    for (var i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+    return str.join(" ");
+}
+$("div h3").append(capital_letter(str));
+</script>   
+</body>                                          
+</html>
